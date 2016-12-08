@@ -65,7 +65,7 @@ object:
       visibility: 
       collect: 
       scope: 
-      description: Configuration name of the IPAM root container to be used ("PLUS")
+      description: Configuration name of the IPAM root container to be used ("default")
       condition: 
       on_entry: 
       on_exit: 
