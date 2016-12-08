@@ -1,0 +1,237 @@
+---
+object_type: class
+version: 1.0
+object:
+  attributes:
+    description: Interface to the Bluecat Proteus IP Address Management application
+    display_name: 
+    name: Bluecat
+    type: 
+    inherits: 
+    visibility: 
+    owner: 
+  schema:
+  - field:
+      aetype: attribute
+      name: ipam_serverlist
+      display_name: IPAM ServerID List
+      datatype: string
+      priority: 1
+      owner: 
+      default_value: '20,22'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: IDs of servers to deploy to
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_deploywait
+      display_name: IPAM Deployment Wait
+      datatype: integer
+      priority: 2
+      owner: 
+      default_value: '10'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Number of seconds to wait after calling the IPAM to deploy the
+        changes
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_configname
+      display_name: IPAM Configuration Name
+      datatype: string
+      priority: 3
+      owner: 
+      default_value: default
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Configuration name of the IPAM root container to be used ("PLUS")
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_timeout_read
+      display_name: IPAM Read Timeout
+      datatype: integer
+      priority: 4
+      owner: 
+      default_value: '20'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Time out after number of seconds while reading to Bluecam Proteus
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_timeout_open
+      display_name: IPAM Open Timeout
+      datatype: integer
+      priority: 5
+      owner: 
+      default_value: '20'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Time out after number of seconds while opening a connection to
+        Bluecat Proteus API
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_net_port
+      display_name: IPAM Port
+      datatype: integer
+      priority: 6
+      owner: 
+      default_value: '443'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Port for connecting to the Bluecat Proteus API (f. e. 80 or 443)
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_net_protocol
+      display_name: IPAM Protocol
+      datatype: string
+      priority: 7
+      owner: 
+      default_value: https
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Protocol to use to connect to the Bluecat Proteus API (http or
+        https)
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_logon_password
+      display_name: IPAM Password
+      datatype: password
+      priority: 8
+      owner: 
+      default_value: v2:{3hLAvxa0CPvG7Ss4xt3Gyw==}
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Password to use logging on to the Bluecat Proteus API
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_logon_username
+      display_name: IPAM Username
+      datatype: string
+      priority: 9
+      owner: 
+      default_value: apiuser
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Username to use for logging on to the Bluecat Proteus API
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: ipam_net_hostname
+      display_name: IPAM Hostname
+      datatype: string
+      priority: 10
+      owner: 
+      default_value: bluecat.some.domain
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: Hostname or IP address of the device running the Bluecat Proteus
+        API
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: method
+      name: method
+      display_name: 
+      datatype: string
+      priority: 11
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 

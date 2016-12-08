@@ -1,0 +1,46 @@
+This class contains methods for integrating the Red Hat CloudForms Management Engine with a Bluecat IPAM.
+These methods have been tested using API version 4.1.1.
+They may also work with the ManageIQ upstream project.
+
+About the values in the schema:
+
+* IPAM ServerID List (ipam_serverlist)
+
+Since you need to place a call to push the updated entries from the database out to the DHCP and DNS servers managed by the Bluecat appliance, this contains the list of the IDs of the front end devices from the Bluecat database. Unfortunately I haven't found a way to find them via the API, but I haven't spend to much time on it. I'd be happy if you add it.
+
+* IPAM Deployment Wait (ipam_deploywait)
+
+Time to wait in the method for the deployment of the changes to the frontend. It would probably be better to poll a front-end device frequently, to check if the modifications have been published yet.
+
+* IPAM Configuration Name (ipam_configname)
+
+As the IPAM can have various configurations, it has to be specified somewhere. 
+For example, it will be "default".
+
+* IPAM Read Timeout (ipam_timeout_read)
+
+I'm using a parameter for read timeouts that can be customized, if the IPAM responds slowly.
+
+* IPAM Open Timeout (ipam_timeout_open)
+
+I have noticed that logging in to get a session key runs in timeouts. This is the time to wait, and the methods will try a couple of times. They use the retry state of the state machine.
+
+* IPAM Port (ipam_net_port)
+
+Port for the API connection, usually 443 for HTTPS.
+
+* IPAM Protocol (ipam_net_protocol)
+
+Protocol to use for the API connection, I've worked with HTTPS.
+
+* IPAM Password (ipam_logon_password)
+
+Password for the API access.
+
+* IPAM Username (ipam_logon_username)
+
+Username for the API access.
+
+* IPAM Hostname (ipam_net_hostname)
+
+Hostname to connect to the API (or IP address).
